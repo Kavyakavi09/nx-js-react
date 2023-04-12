@@ -13,13 +13,14 @@
         "outputPath": "dist/my-frontend-app",
         "index": "src/index.html",
         "baseHref": "/",
-        "main": "src/main.tsx",
+        "main": "src/main.jsx",
         "tsConfig": "tsconfig.app.json",
         "assets": ["src/favicon.ico", "src/assets"],
         "styles": ["src/styles.css"],
         "scripts": [],
         "isolatedConfig": true,
-        "webpackConfig": "webpack.config.js"
+        "webpackConfig": "webpack.config.js",
+        "postcssConfig": "postcss.config.js"
       },
       "configurations": {
         "development": {
@@ -49,6 +50,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "my-frontend-app:build",
+        "port": 3000,
         "hmr": true
       },
       "configurations": {
@@ -78,7 +80,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectName}"],
       "options": {
-        "jestConfig": "jest.config.ts",
+        "jestConfig": "jest.config.app.ts",
         "passWithNoTests": true
       },
       "configurations": {
